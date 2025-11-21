@@ -10,7 +10,7 @@ const SevenSages = () => {
   const [isChatLoading, setIsChatLoading] = useState(false);
 
   // API Key setup
-  const apiKey = import.meta.env.VITE_GOOGLE_API_KEY; // The execution environment provides the key at runtime
+  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY; // The execution environment provides the key at runtime
 
   const sages = [
     {
