@@ -1,4 +1,3 @@
-// craco.config.js
 module.exports = {
   style: {
     postcss: {
@@ -6,6 +5,12 @@ module.exports = {
         require('tailwindcss'),
         require('autoprefixer'),
       ],
+    },
+  },
+  webpack: {
+    configure: (webpackConfig) => {
+      webpackConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx', '.css'];
+      return webpackConfig;
     },
   },
 };
